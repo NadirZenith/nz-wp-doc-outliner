@@ -31,6 +31,14 @@ class NzDocOutliner
      */
     public function __construct()
     {
+        add_action('init', [$this, 'init']);
+    }
+
+    /**
+     * Init plugin
+     */
+    public function init()
+    {
         if (!current_user_can('manage_options')) {
             return;
         }
@@ -66,7 +74,7 @@ class NzDocOutliner
     {
         add_action('admin_bar_menu', [$this, 'outlinerMenu'], 1060);
     }
-    
+
     public function outlinerMenu($wp_admin_bar)
     {
         $args = array(
