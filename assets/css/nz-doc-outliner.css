@@ -1,0 +1,22 @@
+#nz-doc-outliner{
+    background-color:#FFFFFF;
+    border:1px solid #999999;
+    cursor:default;
+    z-index:50;
+    padding: 25px;
+    position:fixed;
+    top:50px;
+    left:50%;
+    width:500px;
+    height:80%;
+    margin-left:-250px;   /* negative half of width above */
+    overflow-y: scroll;
+}
+
+#nz-doc-outliner li{
+    list-style: decimal;
+}
+#nz-doc-outliner li ol {
+    margin-left: 35px;
+}
+
